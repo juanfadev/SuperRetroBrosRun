@@ -37,8 +37,8 @@ ctor:function (gameLayer, posicion) {
 
     // forma
     this.shape = new cp.BoxShape(this.body,
-        this.sprite.getContentSize().width - 16,
-        this.sprite.getContentSize().height - 16);
+        this.sprite.getContentSize().width,
+        this.sprite.getContentSize().height);
     this.shape.setCollisionType(tipoEnemigo);
     // agregar forma dinamica
     gameLayer.space.addShape(this.shape);

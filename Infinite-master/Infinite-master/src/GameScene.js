@@ -51,7 +51,12 @@ var GameLayer = cc.Layer.extend({
          this.depuracion = new cc.PhysicsDebugNode(this.space);
          this.addChild(this.depuracion, 10);
 
-         this.jugador = new Jugador(this, cc.p(50,150));
+         if (nivelActual%2==0){
+             this.jugador = new JugadorPlataformas(this.space, cc.p(50,150),this);
+         }
+         else{
+             this.jugador = new Jugador(this, cc.p(50,150));
+         }
 
 
          this.cargarMapa();
@@ -223,7 +228,7 @@ var GameLayer = cc.Layer.extend({
          monedas = [];
          powerUps = [];
          //var nombreMapa = "res/mapa"+nivelActual+".tmx";
-         var nombreMapa = "res/mapaNSM.tmx";
+         var nombreMapa = "res/mapaNSM1.tmx";
          this.mapa = new cc.TMXTiledMap(nombreMapa);
          // Añadirlo a la Layer
          this.addChild(this.mapa);
@@ -372,11 +377,11 @@ var GameLayer = cc.Layer.extend({
       },collisionJugadorConEnemigo:function (arbiter, space) {
             var capaControles = this.getParent().getChildByTag(idCapaControles);
             var shapes = arbiter.getShapes();
-            var body = shapes[1].getBody();
-            var body2 = shapes[0].getBody();
-            var position = body.getPos();
-            var position2 = body2.getPos();
-            if (position2.y < position.y) { //&& arbiter.isFirstContact()
+            var enemigoBody = shapes[1].getBody();
+            var jugadorBody = shapes[0].getBody();
+            var enemigoPos = enemigoBody.getPos();
+            var jugadorPos = jugadorBody.getPos();
+            if (jugadorPos.y < enemigoPos.y) { //&& arbiter.isFirstContact()
                 this.jugador.restaVida();
             }
             this.formasEliminar.push(shapes[1]);

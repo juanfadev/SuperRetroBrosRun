@@ -4,10 +4,10 @@ var ControlesLayer = cc.Layer.extend({
     spriteBotonDisparo: null,
     etiquetaMonedas: null,
     etiquetaVidas: null,
-    teclaIzquierda:false,
-    teclaDerecha:false,
-    teclaArriba:true,
-    teclaBarra:true,
+    teclaIzquierda: false,
+    teclaDerecha: false,
+    teclaArriba: true,
+    teclaBarra: true,
     monedas: 0,
     tiempoDisparar: 0,
     ctor: function () {
@@ -63,54 +63,64 @@ var ControlesLayer = cc.Layer.extend({
         return true;
     }, update: function (dt) {
 
-    },teclaPulsada: function(keyCode, event){
+    }, teclaPulsada: function (keyCode, event) {
         var instancia = event.getCurrentTarget();
 
         // Flecha izquierda
-        if( keyCode == 37 && instancia.teclaIzquierda == true){
-
+        if (keyCode == 37 && instancia.teclaIzquierda == true) {
+            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
+            gameLayer.jugador.moverIzquierda();
         }
         // Flecha derecha
-        if( keyCode == 39 && instancia.teclaDerecha == true){
+        if (keyCode == 39 && instancia.teclaDerecha == true) {
+            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
+            gameLayer.jugador.moverDerecha();
         }
         // Flecha arriba
-        if( keyCode == 38 && instancia.teclaArriba == true){
-            instancia.teclaArriba = false;
+        if (keyCode == 38 && instancia.teclaArriba == true) {
             // Accedemos al padre (Scene), pedimos la capa con la idCapaJuego
-            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
             // tenemos el objeto GameLayer
-            gameLayer.jugador.saltar();
+            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
+            instancia.teclaArriba = false;
+            /*if (gameLayer.jugador.tipoJugador=="JugadorPlataformas") {
+                gameLayer.jugador.moverArriba();
+
+            } else {*/
+                gameLayer.jugador.saltar();
+            //}
 
         }
         // Barra espaciadora
-        if( keyCode == 32  && instancia.teclaBarra == true){
+        if (keyCode == 32 && instancia.teclaBarra == true) {
             instancia.teclaBarra = false;
             var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
-            if (gameLayer.jugador.vidas == formaFuego) {
-                var disparo = new Disparo(gameLayer.space,
-                    cc.p(gameLayer.jugador.body.p.x +10 , gameLayer.jugador.body.p.y + 10),
-                    gameLayer, false, "Infinite");
-                disparo.body.vx = 400;
-                disparo.body.vy = 50;
+            if (gameLayer.jugador.tipoJugador == "Jugador") {
+                if (gameLayer.jugador.vidas == formaFuego) {
+                    var disparo = new Disparo(gameLayer.space,
+                        cc.p(gameLayer.jugador.body.p.x + 10, gameLayer.jugador.body.p.y + 10),
+                        gameLayer, false, "Infinite");
+                    disparo.body.vx = 400;
+                    disparo.body.vy = 50;
+                }
                 gameLayer.disparos.push(disparo);
             }
         }
-    },teclaLevantada: function(keyCode, event){
+    }, teclaLevantada: function (keyCode, event) {
         var instancia = event.getCurrentTarget();
         // Flecha izquierda
-        if( keyCode == 37){
+        if (keyCode == 37) {
             instancia.teclaIzquierda = false;
         }
         // Flecha derecha
-        if( keyCode == 39){
+        if (keyCode == 39) {
             instancia.teclaDerecha = false;
         }
         // Flecha arriba
-        if( keyCode == 38){
+        if (keyCode == 38) {
             instancia.teclaArriba = true;
         }
         // Barra espaciadora
-        if( keyCode == 32){
+        if (keyCode == 32) {
             instancia.teclaBarra = true;
         }
     }, procesarMouseDown: function (event) {
@@ -135,17 +145,19 @@ var ControlesLayer = cc.Layer.extend({
         }
         if (cc.rectContainsPoint(areaDisparo,
                 cc.p(event.getLocationX(), event.getLocationY()))
-            //&& new Date().getTime() - instancia.tiempoDisparar > 1000
+        //&& new Date().getTime() - instancia.tiempoDisparar > 1000
         ) {
             var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
-            //if (gameLayer.jugador.vidas == formaFuego) {
-                instancia.tiempoDisparar = new Date().getTime();
-                var disparo = new Disparo(gameLayer.space,
-                    cc.p(gameLayer.jugador.body.p.x, gameLayer.jugador.body.p.y),
-                    gameLayer, false, "Infinite");
-                disparo.body.vx = 600;
-                gameLayer.disparos.push(disparo);
-            //}
+            if (gameLayer.jugador.tipoJugador=="Jugador") {
+                if (gameLayer.jugador.vidas == formaFuego) {
+                    instancia.tiempoDisparar = new Date().getTime();
+                    var disparo = new Disparo(gameLayer.space,
+                        cc.p(gameLayer.jugador.body.p.x, gameLayer.jugador.body.p.y),
+                        gameLayer, false, "Infinite");
+                    disparo.body.vx = 600;
+                    gameLayer.disparos.push(disparo);
+                }
+            }
         }
     }, agregarMoneda: function () {
         this.monedas++;

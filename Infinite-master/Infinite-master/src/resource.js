@@ -7,7 +7,7 @@ var res = {
     tiles32_png: "res/tiles32.png",
     mapa1_tmx: "res/mapa1.tmx",
     mapa2_tmx: "res/mapa2.tmx",
-    mapaNSM_tmx: "res/mapaNSM.tmx",
+    mapaNSM_tmx: "res/mapaNSM1.tmx",
     moneda_png : "res/moneda.png",
     moneda_plist : "res/moneda.plist",
     jugador_avanzando_png : "res/jugador_avanzando.png",

@@ -7,6 +7,7 @@ var formaFuego = 3;
 
 var Jugador;
 Jugador = cc.Class.extend({
+    tipoJugador: "Jugador",
     estado: estadoCaminando,
     aaSaltar: null,
     aaCaminar: null,

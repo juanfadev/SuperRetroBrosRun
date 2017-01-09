@@ -1,5 +1,6 @@
 var NuevoEnemigo = cc.Class.extend({
     direccion: "derecha",
+    estado: "movimiento",
     space:null,
     sprite:null,
     shape:null,
@@ -51,18 +52,19 @@ ctor:function (space, posicion, layer,tipo) {
 
    }, moverAutomaticamente: function(){
         // invertir direccion
-
-        // Velocidad baja ha colisionado con algo,
-        if ( this.body.vx < 3 &&  this.body.vx > -3 ) {
-           if (this.direccion == "derecha"){
-               this.direccion = "izquierda";
-               this.body.p.x = this.body.p.x -10; // Para que salga de la colisión
-               this.sprite.scaleX = 1;
-           } else {
-               this.direccion = "derecha";
-                this.body.p.x = this.body.p.x + 10; // Para que salga de la zona de colisión
-               this.sprite.scaleX = -1;
-           }
+        if (this.estado == "movimiento") {
+            // Velocidad baja ha colisionado con algo,
+            if (this.body.vx < 3 && this.body.vx > -3) {
+                if (this.direccion == "derecha") {
+                    this.direccion = "izquierda";
+                    this.body.p.x = this.body.p.x - 10; // Para que salga de la colisión
+                    this.sprite.scaleX = 1;
+                } else {
+                    this.direccion = "derecha";
+                    this.body.p.x = this.body.p.x + 10; // Para que salga de la zona de colisión
+                    this.sprite.scaleX = -1;
+                }
+            }
         }
 
         // Dar impulsos para mantener la velocidad
@@ -95,6 +97,13 @@ ctor:function (space, posicion, layer,tipo) {
               else
                 disparo.body.vx = -350;
             this.layer.disparos.push(disparo);
+        }
+    }, cambiarEstado: function(){
+        if (this.estado == "movimiento"){
+            this.estado= "parado";
+        }
+        else{
+            this.estado = "movimiento";
         }
     }
 });
