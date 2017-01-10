@@ -7,7 +7,8 @@ var res = {
     tiles32_png: "res/tiles32.png",
     mapa1_tmx: "res/mapa1.tmx",
     mapa2_tmx: "res/mapa2.tmx",
-    mapaNSM_tmx: "res/mapaNSM1.tmx",
+    mapaNSM1_tmx: "res/mapaNSM1.tmx",
+    mapaNSM2_tmx: "res/mapaNSM2.tmx",
     moneda_png : "res/moneda.png",
     moneda_plist : "res/moneda.plist",
     jugador_avanzando_png : "res/jugador_avanzando.png",
@@ -64,6 +65,11 @@ var res = {
     powerup_plist: "res/PowerUp.plist",
     powerup_fuego_png: "res/PowerUpFuego.png",
     powerup_fuego_plist: "res/PowerUpFuego.plist",
+    power_up_tubo_wav: "res/PowerUp_Tubo.wav",
+    mario_music_bucle_wav: "res/MarioMusicBucle.wav",
+    win_wav: "res/Win.wav",
+    boss_music_bucle_wav: "res/BossMusicBucle.wav",
+    lost_wav: "res/Lost.wav",
 
 
 

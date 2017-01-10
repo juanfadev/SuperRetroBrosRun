@@ -23,6 +23,7 @@ Jugador = cc.Class.extend({
     body: null,
     vidas: 2,
     usosTurbo: 3,
+    tuboTransport: false,
     ctor: function (gameLayer, posicion) {
         this.gameLayer = gameLayer;
 

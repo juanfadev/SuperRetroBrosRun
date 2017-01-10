@@ -14,6 +14,7 @@ var JugadorPlataformas = cc.Class.extend({
     animacionCorrer: null,
     animacionSaltar: null,
     tocandoSuelo: true,
+    vidas: 1,
     space: null,
     sprite: null,
     shape: null,
@@ -85,7 +86,9 @@ var JugadorPlataformas = cc.Class.extend({
         // Cuerpo dinamico, SI le afectan las fuerzas
 
 
-        this.body = new cp.Body(1, Infinity);
+        this.body = new cp.Body(5, cp.momentForBox(1,
+            this.sprite.getContentSize().width,
+            this.sprite.getContentSize().height));
         this.body.setPos(posicion);
         //body.w_limit = 0.02;
         this.body.setAngle(0);
@@ -100,6 +103,7 @@ var JugadorPlataformas = cc.Class.extend({
             this.sprite.getContentSize().height);
         this.shape.setFriction(0);
         this.shape.setCollisionType(tipoJugador);
+        this.shape.setFriction(0.3);
         //this.shape.setElasticity(0);
         // forma dinamica
         this.space.addShape(this.shape);

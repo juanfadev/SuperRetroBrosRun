@@ -28,7 +28,10 @@
         "src/JugadorPlataformas.js",
         "src/GameModeSelect.js",
         "src/ControlesLayerPlataformas.js",
-        "src/PowerUp.js"
+        "src/PowerUp.js",
+        "src/Boss.js",
+        "src/SalidaTubo.js",
+        "src/EntradaTubo.js"
 
 
 

@@ -8,9 +8,7 @@ var GameOverLayer = cc.LayerColor.extend({
     },
     init:function () {
         this._super(cc.color(0, 0, 0, 180));
-
         var winSize = cc.director.getWinSize();
-
         var botonReiniciar = new cc.MenuItemSprite(
             new cc.Sprite(res.boton_reanudar_png),
             new cc.Sprite(res.boton_reanudar_png),
@@ -23,6 +21,7 @@ var GameOverLayer = cc.LayerColor.extend({
     },
     pulsarReiniciar:function (sender) {
         // Volver a ejecutar la escena Prinicpal
+        cc.audioEngine.stopMusic();
         cc.director.runScene(new GameScene(this.nivelActual));
     }
 });

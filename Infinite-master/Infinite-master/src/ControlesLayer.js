@@ -8,6 +8,7 @@ var ControlesLayer = cc.Layer.extend({
     teclaDerecha: false,
     teclaArriba: true,
     teclaBarra: true,
+    teclaAbajo: true,
     monedas: 0,
     tiempoDisparar: 0,
     ctor: function () {
@@ -90,6 +91,12 @@ var ControlesLayer = cc.Layer.extend({
             //}
 
         }
+        //Flecha abajo
+        if (keyCode == 40 &&  instancia.teclaAbajo == true) {
+            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
+            gameLayer.jugador.tuboTransport = true;
+            instancia.teclaAbajo = false;
+        }
         // Barra espaciadora
         if (keyCode == 32 && instancia.teclaBarra == true) {
             instancia.teclaBarra = false;
@@ -101,8 +108,8 @@ var ControlesLayer = cc.Layer.extend({
                         gameLayer, false, "Infinite");
                     disparo.body.vx = 400;
                     disparo.body.vy = 50;
+                    gameLayer.disparos.push(disparo);
                 }
-                gameLayer.disparos.push(disparo);
             }
         }
     }, teclaLevantada: function (keyCode, event) {
@@ -118,6 +125,12 @@ var ControlesLayer = cc.Layer.extend({
         // Flecha arriba
         if (keyCode == 38) {
             instancia.teclaArriba = true;
+        }
+        //Flecha abajo
+        if (keyCode == 40) {
+            instancia.teclaAbajo = true;
+            var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
+            gameLayer.jugador.tuboTransport = false;
         }
         // Barra espaciadora
         if (keyCode == 32) {
@@ -141,7 +154,7 @@ var ControlesLayer = cc.Layer.extend({
         if (cc.rectContainsPoint(areaTurbo,
                 cc.p(event.getLocationX(), event.getLocationY()))) {
             var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
-            gameLayer.jugador.turbo();
+            gameLayer.jugador.tuboTransport = true;
         }
         if (cc.rectContainsPoint(areaDisparo,
                 cc.p(event.getLocationX(), event.getLocationY()))

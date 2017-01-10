@@ -24,7 +24,7 @@
    eJzt2k1uwjAQgFHfhDO0yqq3KYt2XRbt9RskkJDlQPiRPXbek2aHFLP6YoaUAAC45u0FAwC0dezx7onRcwBoT88BoH96DgCvc7mPfk/19tOj9nw6DQBswYg9n5KeA7Ato/2/fUp6DgA9y1uu5wDUkN9zL/fm3KfUcj0HgH4stVzPAbYrvytHvjN/zrNvfYjM1zzfFZ93reV6DkAPfuY5tD5E5neevzs+/8w7ya2W6zkAPTj3/KMwrZx7XjpT6VyPvpOsabmeA/Comr+Bj3A/j/gdABjbmlbX7FPEFuo5ANGtaY+e6zkAsUXt+dKuusVOfWl/vkTPAagtas8jcT8HIDo9v03PASj5BwNwRrY=
   </data>
  </layer>
- <objectgroup name="Suelos" visible="0">
+ <objectgroup name="Suelos">
   <object id="13" x="269.333" y="408">
    <polyline points="-268,1.33333 358.527,-2 438.427,-22 571.9,-22 570.949,-47 619.52,-47.5 618.667,-46 617.618,72"/>
   </object>
@@ -77,7 +77,7 @@
    <polyline points="0,0 -119,-0.5"/>
   </object>
  </objectgroup>
- <objectgroup name="Monedas" visible="0">
+ <objectgroup name="Monedas">
   <object id="81" x="1476" y="131.5"/>
   <object id="82" x="1427.5" y="227.5"/>
   <object id="83" x="731.5" y="275.5"/>
@@ -100,18 +100,18 @@
   <object id="138" x="2508" y="179"/>
   <object id="139" x="2317" y="180"/>
  </objectgroup>
- <objectgroup name="EntradaTubo" visible="0">
+ <objectgroup name="EntradaTubo">
   <object id="35" x="1702" y="248.667" width="48" height="29.3333"/>
  </objectgroup>
- <objectgroup name="SalidaTubo" visible="0">
+ <objectgroup name="SalidaTubo">
   <object id="36" x="2586" y="190" width="54.6667" height="72"/>
  </objectgroup>
- <objectgroup name="Meta" visible="0">
+ <objectgroup name="Meta">
   <object id="45" x="3717.33" y="49.3333">
    <polyline points="0,0 1.33333,333.333"/>
   </object>
  </objectgroup>
- <objectgroup name="Muros" visible="0">
+ <objectgroup name="Muros">
   <object id="51" x="885.333" y="189.333">
    <polyline points="0,0 1.33333,206.667"/>
   </object>
@@ -131,11 +131,11 @@
    <polyline points="0,0 6.66667,265.333"/>
   </object>
  </objectgroup>
- <objectgroup name="Tortugas" visible="0">
+ <objectgroup name="Tortugas">
   <object id="147" x="1130" y="262.667" width="22.6667" height="22"/>
   <object id="149" x="1500.67" y="91.3333" width="28" height="26"/>
  </objectgroup>
- <objectgroup name="Champiñones" visible="0">
+ <objectgroup name="Champiñones">
   <object id="145" x="791.333" y="360.667" width="24" height="22"/>
   <object id="146" x="1176.67" y="254" width="30" height="30"/>
  </objectgroup>
@@ -143,7 +143,8 @@
   <object id="49" x="517.334" y="365.333" width="34.6667" height="29.3333"/>
   <object id="50" x="1394.67" y="185.333" width="33.3333" height="29.3333"/>
  </objectgroup>
- <objectgroup name="Plantas" visible="0">
+ <objectgroup name="Plantas">
   <object id="70" x="2887" y="254.5" width="32" height="32"/>
  </objectgroup>
+ <objectgroup name="Boss"/>
 </map>

@@ -8,6 +8,8 @@ var tipoDisparo = 7;
 var tipoDisparoEnemigo = 8;
 var tipoPincho = 9;
 var tipoPowerUp = 10;
+var tipoNuevoEnemigo = 11;
+var tipoTubo = 12;
 var nivelActual = 1;
 var nivelMaximo = 2;
 
@@ -23,10 +25,14 @@ var GameLayer = cc.Layer.extend({
     disparos:[],
     enemigos:[],
     powerUps:[],
+    entradasTubo:[],
+    salidasTubo:[],
+    bosses: [],
     nuevosEnemigos:[],
     enemigosPinchos:[],
     ctor:function () {
         this._super();
+        this.tiempoColision = new Date().getTime();
         var size = cc.winSize;
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
         cc.spriteFrameCache.addSpriteFrames(res.jugador_subiendo_plist);
@@ -74,6 +80,8 @@ var GameLayer = cc.Layer.extend({
                 null, this.collisionJugadorConPowerUP.bind(this), null, null);
           this.space.addCollisionHandler(tipoJugador, tipoEnemigo,
                null, this.collisionJugadorConEnemigo.bind(this), null, null);
+        this.space.addCollisionHandler(tipoJugador, tipoNuevoEnemigo,
+            null, this.collisionJugadorConNuevoEnemigo.bind(this), null, null);
           this.space.addCollisionHandler(tipoJugador, tipoMeta,
                          null, this.collisionJugadorConMeta.bind(this), null, null);
           this.space.addCollisionHandler(tipoEnemigo, tipoMuro,
@@ -184,6 +192,8 @@ var GameLayer = cc.Layer.extend({
            // Caída, sí cae vuelve a la posición inicial
             if( this.jugador.body.p.y < -100){
                cc.director.pause();
+               cc.audioEngine.stopMusic();
+               cc.audioEngine.playMusic(res.lost_wav, false);
                cc.director.runScene(new GameOverLayer(nivelActual));
             }
             // Eliminar formas:
@@ -227,8 +237,8 @@ var GameLayer = cc.Layer.extend({
          enemigos = [];
          monedas = [];
          powerUps = [];
-         //var nombreMapa = "res/mapa"+nivelActual+".tmx";
-         var nombreMapa = "res/mapaNSM1.tmx";
+         var nombreMapa = "res/mapaNSM"+nivelActual+".tmx";
+         //var nombreMapa = "res/mapaNSM1.tmx";
          this.mapa = new cc.TMXTiledMap(nombreMapa);
          // Añadirlo a la Layer
          this.addChild(this.mapa);
@@ -330,6 +340,33 @@ var GameLayer = cc.Layer.extend({
 
              this.enemigos.push(enemigo);
          }
+
+        var bosses = this.mapa.getObjectGroup("Boss");
+        var bossArray = bosses.getObjects();
+        for (var i = 0; i < bossArray.length; i++) {
+            var boss = new Boss(this,
+                cc.p(bossArray[i]["x"],bossArray[i]["y"]));
+
+            this.bosses.push(boss);
+        }
+        var entradasTubo = this.mapa.getObjectGroup("EntradaTubo");
+        var entradaTuboArray = entradasTubo.getObjects();
+        for (var i = 0; i < entradaTuboArray.length; i++) {
+            var tubo = new SalidaTubo(this,
+                cc.p(entradaTuboArray[i]["x"],entradaTuboArray[i]["y"]));
+
+            this.entradasTubo.push(tubo);
+        }
+
+        var salidasTubo = this.mapa.getObjectGroup("SalidaTubo");
+        var salidaTuboArray = salidasTubo.getObjects();
+        for (var i = 0; i < salidaTuboArray.length; i++) {
+            var tubo = new SalidaTubo(this,
+                cc.p(salidaTuboArray[i]["x"],salidaTuboArray[i]["y"]));
+
+            this.salidasTubo.push(tubo);
+        }
+
          var grupoNuevosEnemigos = this.mapa.getObjectGroup("Tortugas");
          var enemigosNuevosArray = grupoNuevosEnemigos.getObjects();
          for (var i = 0; i < enemigosNuevosArray.length; i++) {
@@ -374,6 +411,24 @@ var GameLayer = cc.Layer.extend({
         var capaControles = this.getParent().getChildByTag(idCapaControles);
         capaControles.actualizarVidas(this.jugador.vidas);
 
+    },collisionJugadorConTuboTransport:function (arbiter, space) {
+        var capaControles = this.getParent().getChildByTag(idCapaControles);
+        var shapes = arbiter.getShapes();
+        var tuboPos = shapes[1].getBody();
+        var jugadorBody = shapes[0].getBody();
+        var tuboPos = tuboPos.getPos();
+        var jugadorPos = jugadorBody.getPos();
+        var index = 0;
+        for (var j = 0; j < this.entradasTubo.length; j++) {
+            if (this.entradasTubo[j].shape == shapes[1]) {
+                index = j;
+            }
+        }
+        var salidaTubo = this.salidasTubo[index];
+        if (this.jugador.tuboTransport){
+            this.jugador.body.p = cc.p(salidaTubo.getBody().x, salidaTubo.getBody().y);
+        }
+
       },collisionJugadorConEnemigo:function (arbiter, space) {
             var capaControles = this.getParent().getChildByTag(idCapaControles);
             var shapes = arbiter.getShapes();
@@ -387,9 +442,33 @@ var GameLayer = cc.Layer.extend({
             this.formasEliminar.push(shapes[1]);
             if(this.jugador.vidas<=0){
                 cc.director.pause();
+                cc.audioEngine.stopMusic();
+                cc.audioEngine.playMusic(res.lost_wav, false);
                 cc.director.runScene(new GameOverLayer(nivelActual));
             }
             capaControles.actualizarVidas(this.jugador.vidas);
+    },collisionJugadorConNuevoEnemigo:function (arbiter, space) {
+        var time = new Date().getTime();
+        var capaControles = this.getParent().getChildByTag(idCapaControles);
+        var shapes = arbiter.getShapes();
+        var enemigoBody = shapes[1].getBody();
+        var jugadorBody = shapes[0].getBody();
+        var enemigoPos = enemigoBody.getPos();
+        var jugadorPos = jugadorBody.getPos();
+        if (jugadorPos.y < enemigoPos.y) { //&& arbiter.isFirstContact()
+            this.jugador.restaVida();
+        }
+        if (time - this.tiempoColision < 1000){
+            //vx enemigo = 0
+        }
+        if(this.jugador.vidas<=0){
+            cc.director.pause();
+            cc.audioEngine.stopMusic();
+            cc.audioEngine.playMusic(res.lost_wav, false);
+            cc.director.runScene(new GameOverLayer(nivelActual));
+        }
+        capaControles.actualizarVidas(this.jugador.vidas);
+        this.tiempoColision = time;
       },collisionJugadorConMeta:function (arbiter, space){
             nivelActual++;
             if(nivelMaximo<nivelActual)
@@ -419,11 +498,15 @@ var GameLayer = cc.Layer.extend({
        this.formasEliminar.push(shapes[0]);
        if(this.jugador.vidas<=0){
            cc.director.pause();
+           cc.audioEngine.stopMusic();
+           cc.audioEngine.playMusic(res.lost_wav, false);
            cc.director.runScene(new GameOverLayer(nivelActual));
        }
        capaControles.actualizarVidas(this.jugador.vidas);
       },collisionJugadorConEnemigoPinchos:function(arbiter,space){
             cc.director.pause();
+            cc.audioEngine.stopMusic();
+            cc.audioEngine.playMusic(res.lost_wav, false);
             cc.director.runScene(new GameOverLayer(nivelActual));
       }
 });
@@ -440,8 +523,13 @@ var GameScene = cc.Scene.extend({
         this._super();
         cc.director.resume();
         var layer = new GameLayer();
+        if (nivelActual%2==0){
+            cc.audioEngine.playMusic(res.boss_music_bucle_wav, true);
+        }
+        else {
+            cc.audioEngine.playMusic(res.mario_music_bucle_wav, true);
+        }
         this.addChild(layer, 0, idCapaJuego);
-
         var controlesLayer = new ControlesLayer();
         this.addChild(controlesLayer, 0, idCapaControles);
 

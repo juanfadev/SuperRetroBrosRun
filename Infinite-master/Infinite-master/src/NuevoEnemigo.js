@@ -40,7 +40,7 @@ ctor:function (space, posicion, layer,tipo) {
     // agregar forma dinamica
     this.space.addShape(this.shape);
     if(tipo=="Infinite")
-        this.shape.setCollisionType(tipoEnemigo);
+        this.shape.setCollisionType(tipoNuevoEnemigo);
     else
         this.shape.setCollisionType(tipoEnemigoPlataformas)
     // añadir sprite a la capa
