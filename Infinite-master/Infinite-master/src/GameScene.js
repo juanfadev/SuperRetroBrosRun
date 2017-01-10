@@ -30,9 +30,11 @@ var GameLayer = cc.Layer.extend({
     bosses: [],
     nuevosEnemigos: [],
     enemigosPinchos: [],
+    congelado: false,
+    enemigosCongelados: [],
     ctor: function () {
         this._super();
-        this.tiempoColision = new Date().getTime();
+        this.tiempoColision = 0;
         var size = cc.winSize;
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
         cc.spriteFrameCache.addSpriteFrames(res.jugador_subiendo_plist);
@@ -123,8 +125,10 @@ var GameLayer = cc.Layer.extend({
         // Mover enemigos:
         for (var i = 0; i < this.nuevosEnemigos.length; i++) {
             var enemigo = this.nuevosEnemigos[i];
-            enemigo.moverAutomaticamente();
-            enemigo.disparar();
+            if (!enemigo.congelado) {
+                enemigo.moverAutomaticamente();
+                enemigo.disparar();
+            }
         }
 
 
@@ -152,7 +156,7 @@ var GameLayer = cc.Layer.extend({
             this.getParent().getChildByTag(idCapaControles);
         // controlar la velocidad X , max y min
         if (nivelActual % 2 == 0) {
-            if (this.bosses.length == 0){
+            if (this.bosses.length == 0) {
                 cc.director.pause();
                 cc.director.runScene(new GameWinLayer(nivelActual));
             }
@@ -439,7 +443,7 @@ var GameLayer = cc.Layer.extend({
         }
         var salidaTubo = this.salidasTubo[index].shape;
         //if (this.jugador.tuboTransport) {
-            this.jugador.body.p = salidaTubo.body.p;
+        this.jugador.body.p = salidaTubo.body.p;
         //}
 
     }, collisionJugadorConEnemigo: function (arbiter, space) {
@@ -488,17 +492,31 @@ var GameLayer = cc.Layer.extend({
         if (jugadorPos.y < enemigoPos.y) { //&& arbiter.isFirstContact()
             this.jugador.restaVida();
         }
-        if (time - this.tiempoColision < 1000) {
-            //vx enemigo = 0
+        for (var j = 0; j < this.nuevosEnemigos.length; j++) {
+            if (this.nuevosEnemigos[j].shape == shapes[1]) {
+                var nuevoEnemigo = this.nuevosEnemigos[j];
+            }
         }
-        if (this.jugador.vidas <= 0) {
-            cc.director.pause();
-            cc.audioEngine.stopMusic();
-            cc.audioEngine.playMusic(res.lost_wav, false);
-            cc.director.runScene(new GameOverLayer(nivelActual));
+
+        if (time - this.tiempoColision > 10000) {
+            if (!nuevoEnemigo.congelado) {
+                enemigoBody.vx = 0;
+                nuevoEnemigo.congelado = true;
+                //Mandar el enemigo a congelados y eliminarlo de la lista de enemigos
+            }
+            else{
+                //Volver a meterlo en la lista de enemigos
+                nuevoEnemigo.congelado = false;
+            }
+            if (this.jugador.vidas <= 0) {
+                cc.director.pause();
+                cc.audioEngine.stopMusic();
+                cc.audioEngine.playMusic(res.lost_wav, false);
+                cc.director.runScene(new GameOverLayer(nivelActual));
+            }
+            capaControles.actualizarVidas(this.jugador.vidas);
+            this.tiempoColision = time;
         }
-        capaControles.actualizarVidas(this.jugador.vidas);
-        this.tiempoColision = time;
     }, collisionJugadorConMeta: function (arbiter, space) {
         cc.director.pause();
         cc.director.runScene(new GameWinLayer(nivelActual));

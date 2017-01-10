@@ -20,9 +20,7 @@ var PowerUp = cc.Class.extend({
         this.sprite = new cc.PhysicsSprite("#PowerUp_01.png");
         // Cuerpo estática, no le afectan las fuerzas
         // Cuerpo dinámico, SI le afectan las fuerzas
-        this.body = new cp.Body(5, cp.momentForBox(1,
-            this.sprite.getContentSize().width,
-            this.sprite.getContentSize().height));
+        this.body = new cp.Body(5, Infinity);
 
         this.body.setPos(posicion);
         this.body.setAngle(0);

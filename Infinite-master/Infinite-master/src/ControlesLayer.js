@@ -95,7 +95,6 @@ var ControlesLayer = cc.Layer.extend({
         if (keyCode == 40 &&  instancia.teclaAbajo == true) {
             var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
             gameLayer.jugador.tuboTransport = true;
-            instancia.teclaAbajo = false;
         }
         // Barra espaciadora
         if (keyCode == 32 && instancia.teclaBarra == true) {
