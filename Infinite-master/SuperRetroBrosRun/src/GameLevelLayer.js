@@ -1,12 +1,11 @@
-
 var GameLevelLayer = cc.LayerColor.extend({
-    modo:null,
-    ctor:function (tipo) {
+    modo: null,
+    ctor: function (tipo) {
         this._super();
         this.init();
         this.modo = tipo;
     },
-    init:function () {
+    init: function () {
         this._super(cc.color(0, 0, 0, 180));
 
         var winSize = cc.director.getWinSize();
@@ -31,16 +30,9 @@ var GameLevelLayer = cc.LayerColor.extend({
 
         this.addChild(menu);
     },
-    pulsarBoton1:function (sender) {
-        // Volver a ejecutar la escena Prinicpal
-        if(this.modo == "Plataformas")
-            cc.director.runScene(new GameScenePlataformas(1));
-        else
-            cc.director.runScene(new GameScene(1));
-    },pulsarBoton2:function (sender) {
-           if(this.modo == "Plataformas")
-               cc.director.runScene(new GameScenePlataformas(2));
-           else
-               cc.director.runScene(new GameScene(2));
+    pulsarBoton1: function (sender) {
+        cc.director.runScene(new GameScene(1));
+    }, pulsarBoton2: function (sender) {
+        cc.director.runScene(new GameScene(2));
     }
 });
