@@ -7,15 +7,14 @@ var SalidaTubo = cc.Class.extend({
 
         // Crear Sprite - Cuerpo y forma
         this.sprite = new cc.PhysicsSprite("#mario_mini_caminando1.png");
-        this.sprite.opacity = 0;
+        this.sprite.opacity = 80;
         // Cuerpo estática, no le afectan las fuerzas
         var body = new cp.StaticBody();
         body.setPos(posicion);
         this.sprite.setBody(body);
         // Los cuerpos estáticos nunca se añaden al Space
-        var radio = this.sprite.getContentSize().width / 2 + 10;
         // forma
-        this.shape = new cp.CircleShape(body, radio, cp.vzero);
+        this.shape = new cp.BoxShape(body, 1, 1);
         // Nunca genera colisiones reales, es como un “fantasma”
         this.shape.setSensor(true);
         // forma estática

@@ -22,7 +22,7 @@ var ControlesLayer = cc.Layer.extend({
         this.addChild(this.etiquetaMonedas);
 
         // Contador Vidas
-        this.etiquetaVidas = new cc.LabelTTF("Vidas: 2", "Helvetica", 20);
+        this.etiquetaVidas = new cc.LabelTTF("Vidas: 1", "Helvetica", 20);
         this.etiquetaVidas.setPosition(cc.p(size.width - size.width + 90, size.height - 20));
         this.etiquetaVidas.fillStyle = new cc.Color(0, 0, 0, 0);
         this.addChild(this.etiquetaVidas);

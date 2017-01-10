@@ -10,7 +10,7 @@ var tipoPincho = 9;
 var tipoPowerUp = 10;
 var tipoNuevoEnemigo = 11;
 var tipoBoss = 12;
-var tipoTubo = 12;
+var tipoTubo = 13;
 var nivelActual = 1;
 
 var GameLayer = cc.Layer.extend({
@@ -55,8 +55,8 @@ var GameLayer = cc.Layer.extend({
         this.space = new cp.Space();
         this.space.gravity = cp.v(0, -650);
         // Depuración
-        this.depuracion = new cc.PhysicsDebugNode(this.space);
-        this.addChild(this.depuracion, 10);
+        //this.depuracion = new cc.PhysicsDebugNode(this.space);
+        //this.addChild(this.depuracion, 10);
 
         if (nivelActual % 2 == 0) {
             this.jugador = new JugadorPlataformas(this.space, cc.p(50, 150), this);
@@ -81,6 +81,8 @@ var GameLayer = cc.Layer.extend({
             null, this.collisionJugadorConPowerUP.bind(this), null, null);
         this.space.addCollisionHandler(tipoJugador, tipoEnemigo,
             null, this.collisionJugadorConEnemigo.bind(this), null, null);
+        this.space.addCollisionHandler(tipoJugador, tipoTubo,
+            null, this.collisionJugadorConTuboTransport.bind(this), null, null);
         this.space.addCollisionHandler(tipoJugador, tipoBoss,
             null, this.collisionJugadorConBoss.bind(this), null, null);
         this.space.addCollisionHandler(tipoJugador, tipoNuevoEnemigo,
@@ -363,7 +365,7 @@ var GameLayer = cc.Layer.extend({
         var entradasTubo = this.mapa.getObjectGroup("EntradaTubo");
         var entradaTuboArray = entradasTubo.getObjects();
         for (var i = 0; i < entradaTuboArray.length; i++) {
-            var tubo = new SalidaTubo(this,
+            var tubo = new EntradaTubo(this,
                 cc.p(entradaTuboArray[i]["x"], entradaTuboArray[i]["y"]));
 
             this.entradasTubo.push(tubo);
@@ -435,10 +437,10 @@ var GameLayer = cc.Layer.extend({
                 index = j;
             }
         }
-        var salidaTubo = this.salidasTubo[index];
-        if (this.jugador.tuboTransport) {
-            this.jugador.body.p = cc.p(salidaTubo.getBody().x, salidaTubo.getBody().y);
-        }
+        var salidaTubo = this.salidasTubo[index].shape;
+        //if (this.jugador.tuboTransport) {
+            this.jugador.body.p = salidaTubo.body.p;
+        //}
 
     }, collisionJugadorConEnemigo: function (arbiter, space) {
         var capaControles = this.getParent().getChildByTag(idCapaControles);

@@ -21,7 +21,7 @@ Jugador = cc.Class.extend({
     sprite: null,
     shape: null,
     body: null,
-    vidas: 2,
+    vidas: 1,
     usosTurbo: 3,
     tuboTransport: false,
     ctor: function (gameLayer, posicion) {
@@ -110,10 +110,10 @@ Jugador = cc.Class.extend({
 
         ///////////////////////////////////////////////////////////////////////////
 
-        this.aaCaminar = this.gCaminar;
+        this.aaCaminar = this.mCaminar;
         this.aaCaminar.retain();
 
-        this.aaSaltar = this.gSaltar;
+        this.aaSaltar = this.mSaltar;
         this.aaSaltar.retain();
 
         // Crear Sprite - Cuerpo y forma
