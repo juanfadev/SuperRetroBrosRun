@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/GameScene.js" line="77" />
+    <bookmark url="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameScene.js" line="77" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd92526f-abe3-4fce-b7a2-aec3ddba5807" name="Default" comment="" />
@@ -25,7 +25,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="JugadorPlataformas.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JugadorPlataformas.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/JugadorPlataformas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2157">
               <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="18" />
@@ -35,7 +35,7 @@
         </entry>
       </file>
       <file leaf-file-name="NuevoEnemigo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NuevoEnemigo.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/NuevoEnemigo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
@@ -44,8 +44,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Disparo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Disparo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PowerUp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PowerUp.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/PowerUp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
@@ -55,9 +65,9 @@
         </entry>
       </file>
       <file leaf-file-name="Enemigo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Enemigo.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Enemigo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
+            <state relative-caret-position="90">
               <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
@@ -65,7 +75,7 @@
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
@@ -74,18 +84,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Jugador.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Jugador.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
@@ -95,7 +95,7 @@
         </entry>
       </file>
       <file leaf-file-name="SalidaTubo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SalidaTubo.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/SalidaTubo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
@@ -105,21 +105,39 @@
         </entry>
       </file>
       <file leaf-file-name="ControlesLayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/ControlesLayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="52" />
+            <state relative-caret-position="396">
+              <caret line="161" column="67" lean-forward="true" selection-start-line="161" selection-start-column="67" selection-end-line="161" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GameScene.js">
+        <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="539" column="37" lean-forward="false" selection-start-line="539" selection-start-column="37" selection-end-line="539" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="787">
+              <caret line="605" column="0" lean-forward="true" selection-start-line="605" selection-start-column="0" selection-end-line="605" selection-end-column="0" />
+              <folding>
+                <element signature="e#10659#10708#0" expanded="false" />
+                <element signature="e#10820#11570#0" expanded="false" />
+                <element signature="e#10965#11560#0" expanded="false" />
+                <element signature="e#11691#11739#0" expanded="false" />
+                <element signature="e#11850#12585#0" expanded="false" />
+                <element signature="e#11992#12575#0" expanded="false" />
+                <element signature="e#12702#12750#0" expanded="false" />
+                <element signature="e#12860#13594#0" expanded="false" />
+                <element signature="e#13001#13584#0" expanded="false" />
+                <element signature="e#13768#13939#0" expanded="false" />
+                <element signature="e#14117#14274#0" expanded="false" />
+                <element signature="e#14455#14621#0" expanded="false" />
+                <element signature="e#14774#14921#0" expanded="false" />
+                <element signature="e#15106#15280#0" expanded="false" />
+                <element signature="e#15461#15631#0" expanded="false" />
+                <element signature="e#15834#16057#0" expanded="false" />
+                <element signature="e#16246#16454#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,10 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pdate</find>
-      <find>formasEli</find>
-      <find>gameWin</find>
-      <find>collision</find>
       <find>nivel</find>
       <find>nivelACt</find>
       <find>nivelACtua</find>
@@ -155,16 +169,20 @@
       <find>.body.vx</find>
       <find>nuevoEn</find>
       <find>formasEliminar</find>
-      <find>update</find>
       <find>congela</find>
       <find>enemigo</find>
-      <find>vidas</find>
       <find>vx</find>
       <find>actualizar</find>
       <find>.update</find>
       <find>enemigos</find>
       <find>nuevos</find>
       <find>disparo</find>
+      <find>muro</find>
+      <find>collisionEnemigo</find>
+      <find>update</find>
+      <find>.girar</find>
+      <find>this.addCh</find>
+      <find>vidas</find>
     </findStrings>
     <replaceStrings>
       <replace>m</replace>
@@ -206,8 +224,8 @@
         <option value="$PROJECT_DIR$/src/Jugador.js" />
         <option value="$PROJECT_DIR$/src/PowerUp.js" />
         <option value="$PROJECT_DIR$/src/Enemigo.js" />
-        <option value="$PROJECT_DIR$/src/ControlesLayer.js" />
         <option value="$PROJECT_DIR$/src/NuevoEnemigo.js" />
+        <option value="$PROJECT_DIR$/src/ControlesLayer.js" />
         <option value="$PROJECT_DIR$/src/GameScene.js" />
       </list>
     </option>
@@ -253,21 +271,21 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="infinite" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Infinite-master" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="infinite" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Infinite-master" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -277,11 +295,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="infinite" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Infinite-master" />
+              <option name="myItemId" value="SuperRetroBrosRun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -412,12 +430,12 @@
       <workItem from="1483990431056" duration="1632000" />
       <workItem from="1484048208440" duration="137000" />
       <workItem from="1484054927931" duration="9033000" />
-      <workItem from="1484069449796" duration="11019000" />
+      <workItem from="1484069449796" duration="14387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76130000" />
+    <option name="totallyTimeSpent" value="79498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -476,98 +494,98 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/infinite.iml">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/SuperRetroBrosRun.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameLevelLayer.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameLevelLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlesLayerPlataformas.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/ControlesLayerPlataformas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
@@ -575,124 +593,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.cocos-project.json">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/.cocos-project.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/mario_mini_caminando.png">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/res/mario_mini_caminando.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/layers/CCLayer.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/core/layers/CCLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="88" column="4" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/actions/CCAction.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/actions/CCAction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="191" column="4" lean-forward="false" selection-start-line="191" selection-start-column="4" selection-end-line="191" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/sprites/CCAnimation.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/core/sprites/CCAnimation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/cocoa/CCGeometry.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/core/cocoa/CCGeometry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/extensions/cocostudio/armature/physics/CCColliderDetector.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/extensions/cocostudio/armature/physics/CCColliderDetector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="374" column="4" lean-forward="false" selection-start-line="374" selection-start-column="4" selection-end-line="374" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/script/jsb_cocos2d.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/js-bindings/bindings/script/jsb_cocos2d.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="619" column="0" lean-forward="false" selection-start-line="619" selection-start-column="0" selection-end-line="619" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EnemigoPinchos.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/EnemigoPinchos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/champiñon.plist">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/res/champiñon.plist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNode.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="1643" column="4" lean-forward="false" selection-start-line="1643" selection-start-column="4" selection-end-line="1643" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/parallax/CCParallaxNode.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/parallax/CCParallaxNode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="225" column="5" lean-forward="false" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameScenePlataformas.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameScenePlataformas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="195" column="43" lean-forward="false" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="43" />
@@ -700,7 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameOverLayer.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameOverLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
@@ -708,15 +726,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Disparo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.json">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/project.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
@@ -724,7 +734,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/external/chipmunk/chipmunk.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/frameworks/cocos2d-html5/external/chipmunk/chipmunk.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="204" column="12" lean-forward="false" selection-start-line="204" selection-start-column="12" selection-end-line="204" selection-end-column="12" />
@@ -732,7 +742,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Boss.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Boss.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
@@ -740,7 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Moneda.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Moneda.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
@@ -748,7 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWinLayer.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameWinLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="28" />
@@ -756,7 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntradaTubo.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/EntradaTubo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
@@ -764,7 +774,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
@@ -772,7 +782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/PowerUp.plist">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/res/PowerUp.plist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1289">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -780,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
@@ -788,7 +798,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PowerUp.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/PowerUp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
@@ -796,7 +806,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JugadorPlataformas.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/JugadorPlataformas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2157">
           <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="18" />
@@ -804,15 +814,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Enemigo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NuevoEnemigo.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/NuevoEnemigo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
@@ -820,15 +822,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SalidaTubo.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/SalidaTubo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
@@ -836,7 +830,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Jugador.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
@@ -844,11 +838,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameScene.js">
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Disparo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="539" column="37" lean-forward="false" selection-start-line="539" selection-start-column="37" selection-end-line="539" selection-end-column="37" />
+        <state relative-caret-position="-102">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/Enemigo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/ControlesLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="161" column="67" lean-forward="true" selection-start-line="161" selection-start-column="67" selection-end-line="161" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SuperRetroBrosRun/src/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="605" column="0" lean-forward="true" selection-start-line="605" selection-start-column="0" selection-end-line="605" selection-end-column="0" />
+          <folding>
+            <element signature="e#10659#10708#0" expanded="false" />
+            <element signature="e#10820#11570#0" expanded="false" />
+            <element signature="e#10965#11560#0" expanded="false" />
+            <element signature="e#11691#11739#0" expanded="false" />
+            <element signature="e#11850#12585#0" expanded="false" />
+            <element signature="e#11992#12575#0" expanded="false" />
+            <element signature="e#12702#12750#0" expanded="false" />
+            <element signature="e#12860#13594#0" expanded="false" />
+            <element signature="e#13001#13584#0" expanded="false" />
+            <element signature="e#13768#13939#0" expanded="false" />
+            <element signature="e#14117#14274#0" expanded="false" />
+            <element signature="e#14455#14621#0" expanded="false" />
+            <element signature="e#14774#14921#0" expanded="false" />
+            <element signature="e#15106#15280#0" expanded="false" />
+            <element signature="e#15461#15631#0" expanded="false" />
+            <element signature="e#15834#16057#0" expanded="false" />
+            <element signature="e#16246#16454#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -93,6 +93,8 @@ var GameLayer = cc.Layer.extend({
             null, this.collisionJugadorConMeta.bind(this), null, null);
         this.space.addCollisionHandler(tipoEnemigo, tipoMuro,
             null, this.collisionEnemigoConMuro.bind(this), null, null);
+        this.space.addCollisionHandler(tipoNuevoEnemigo, tipoMuro,
+            null, this.collisionEnemigoConMuro.bind(this), null, null);
         this.space.addCollisionHandler(tipoDisparo, tipoEnemigo,
             null, this.colisionDisparoConEnemigo.bind(this), null, null);
         this.space.addCollisionHandler(tipoDisparoEnemigo, tipoJugador,
@@ -521,7 +523,28 @@ var GameLayer = cc.Layer.extend({
         cc.director.pause();
         cc.director.runScene(new GameWinLayer(nivelActual));
     }, collisionEnemigoConMuro: function (arbiter, space) {
+        var shapes = arbiter.getShapes();
+        var enemigoBody = shapes[1].getBody();
 
+        for (var j = 0; j < this.enemigos.length; j++) {
+            if (this.enemigos[j].shape == shapes[1]) {
+                var nuevoEnemigo = this.enemigos[j];
+            }
+        }
+        if (nuevoEnemigo!= undefined)
+            nuevoEnemigo.girar();
+
+    }, collisionNuevoEnemigoConMuro: function (arbiter, space) {
+        var shapes = arbiter.getShapes();
+        var enemigoBody = shapes[1].getBody();
+
+        for (var j = 0; j < this.nuevosEnemigos.length; j++) {
+            if (this.nuevosEnemigos[j].shape == shapes[1]) {
+                var nuevoEnemigo = this.nuevosEnemigos[j];
+            }
+        }
+        if (nuevoEnemigo!= undefined)
+            nuevoEnemigo.girar();
     }, colisionDisparoConEnemigo: function (arbiter, space) {
         var shapes = arbiter.getShapes();
 

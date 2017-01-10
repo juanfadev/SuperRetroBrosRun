@@ -7,57 +7,57 @@
 			<key>disparo_01.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{29,31},{26,26}}</string>
+				<string>{{0,7},{7,6}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{26,26}}</string>
+				<string>{{0,0},{7,6}}</string>
 				<key>sourceSize</key>
-				<string>{26,26}</string>
+				<string>{7,6}</string>
 			</dict>
 
 			<key>disparo_02.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{30,30}}</string>
+				<string>{{8,8},{6,7}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{30,30}}</string>
+				<string>{{0,0},{6,7}}</string>
 				<key>sourceSize</key>
-				<string>{30,30}</string>
+				<string>{6,7}</string>
 			</dict>
 
 			<key>disparo_03.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,31},{28,28}}</string>
+				<string>{{0,0},{7,6}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{28,28}}</string>
+				<string>{{0,0},{7,6}}</string>
 				<key>sourceSize</key>
-				<string>{28,28}</string>
+				<string>{7,6}</string>
 			</dict>
 
 			<key>disparo_04.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{31,0},{24,24}}</string>
+				<string>{{8,0},{6,7}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{24,24}}</string>
+				<string>{{0,0},{6,7}}</string>
 				<key>sourceSize</key>
-				<string>{24,24}</string>
+				<string>{6,7}</string>
 			</dict>
 
 		</dict>
@@ -67,7 +67,7 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>size</key>
-			<string>{64,64}</string>
+			<string>{15,16}</string>
 			<key>textureFileName</key>
 			<string>disparo.png</string>
 			</dict>

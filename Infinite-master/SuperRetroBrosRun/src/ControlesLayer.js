@@ -33,14 +33,14 @@ var ControlesLayer = cc.Layer.extend({
             cc.p(size.width * 0.8, size.height * 0.5));
 
         this.addChild(this.spriteBotonSaltar);
-
+/*
         // BotonTurbo
         this.spriteBotonTurbo = cc.Sprite.create(res.boton_turbo_png);
         this.spriteBotonTurbo.setPosition(
             cc.p(size.width * 0.8, size.height * 0.8));
 
         this.addChild(this.spriteBotonTurbo);
-
+*/
         // BotonDisparo
         this.spriteBotonDisparo = cc.Sprite.create(res.boton_disparar_png);
         this.spriteBotonDisparo.setPosition(
@@ -150,11 +150,13 @@ var ControlesLayer = cc.Layer.extend({
             // tenemos el objeto GameLayer
             gameLayer.jugador.saltar();
         }
+        /*
         if (cc.rectContainsPoint(areaTurbo,
                 cc.p(event.getLocationX(), event.getLocationY()))) {
             var gameLayer = instancia.getParent().getChildByTag(idCapaJuego);
             gameLayer.jugador.tuboTransport = true;
         }
+        */
         if (cc.rectContainsPoint(areaDisparo,
                 cc.p(event.getLocationX(), event.getLocationY()))
         //&& new Date().getTime() - instancia.tiempoDisparar > 1000
