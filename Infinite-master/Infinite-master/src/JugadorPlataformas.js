@@ -122,6 +122,10 @@ var JugadorPlataformas = cc.Class.extend({
         }
         this.sprite.scaleX = -1;
 
+        if (this.body.vx > 100){
+            this.body.applyImpulse(cp.v(-300, 0), cp.v(0, 0));
+        }
+
         this.body.applyImpulse(cp.v(-100, 0), cp.v(0, 0));
 
     }, moverDerecha: function () {
@@ -131,7 +135,9 @@ var JugadorPlataformas = cc.Class.extend({
             this.sprite.runAction(this.animacionCorrer);
         }
         this.sprite.scaleX = 1;
-
+        if (this.body.vx < -100){
+            this.body.applyImpulse(cp.v(300, 0), cp.v(0, 0));
+        }
         this.body.applyImpulse(cp.v(100, 0), cp.v(0, 0));
         /*
          }, moverArriba: function(){
@@ -174,6 +180,8 @@ var JugadorPlataformas = cc.Class.extend({
             this.sprite.stopAllActions();
             this.sprite.runAction(this.animacionCorrer);
         }
+    }, restaVida: function () {
+        this.vidas--;
     }, actualizarAnimacion: function () {
         if (this.tiempoDisparando > 0) {
             this.tiempoDisparando = this.tiempoDisparando - 1;

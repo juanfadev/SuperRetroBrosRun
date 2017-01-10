@@ -9,8 +9,8 @@ var Boss = cc.Class.extend({
 
         // Crear animación
         var framesAnimacion = [];
-        for (var i = 1; i <= 8; i++) {
-            var str = "champiñon_0" + i + ".png";
+        for (var i = 1; i <= 9; i++) {
+            var str = "boss_0" + i + ".png";
             var frame = cc.spriteFrameCache.getSpriteFrame(str);
             framesAnimacion.push(frame);
         }
@@ -19,10 +19,10 @@ var Boss = cc.Class.extend({
             new cc.RepeatForever(new cc.Animate(animacion));
 
         // Crear Sprite - Cuerpo y forma
-        this.sprite = new cc.PhysicsSprite("#champiñon_01.png");
+        this.sprite = new cc.PhysicsSprite("#boss_01.png");
         // Cuerpo estática , no le afectan las fuerzas
         // Cuerpo dinámico, SI le afectan las fuerzas
-        this.body = new cp.Body(5, cp.momentForBox(1,
+        this.body = new cp.Body(10, cp.momentForBox(1,
             this.sprite.getContentSize().width,
             this.sprite.getContentSize().height));
 
@@ -36,7 +36,7 @@ var Boss = cc.Class.extend({
         this.shape = new cp.BoxShape(this.body,
             this.sprite.getContentSize().width,
             this.sprite.getContentSize().height);
-        this.shape.setCollisionType(tipoEnemigo);
+        this.shape.setCollisionType(tipoBoss);
         // agregar forma dinamica
         gameLayer.space.addShape(this.shape);
         // añadir sprite a la capa

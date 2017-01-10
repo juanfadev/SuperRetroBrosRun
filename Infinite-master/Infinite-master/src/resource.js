@@ -70,6 +70,8 @@ var res = {
     win_wav: "res/Win.wav",
     boss_music_bucle_wav: "res/BossMusicBucle.wav",
     lost_wav: "res/Lost.wav",
+    boss_png: "res/boss.png",
+    boss_plist: "res/boss.plist"
 
 
 

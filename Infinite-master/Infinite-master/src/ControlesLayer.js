@@ -4,8 +4,8 @@ var ControlesLayer = cc.Layer.extend({
     spriteBotonDisparo: null,
     etiquetaMonedas: null,
     etiquetaVidas: null,
-    teclaIzquierda: false,
-    teclaDerecha: false,
+    teclaIzquierda: true,
+    teclaDerecha: true,
     teclaArriba: true,
     teclaBarra: true,
     teclaAbajo: true,
@@ -116,11 +116,11 @@ var ControlesLayer = cc.Layer.extend({
         var instancia = event.getCurrentTarget();
         // Flecha izquierda
         if (keyCode == 37) {
-            instancia.teclaIzquierda = false;
+            instancia.teclaIzquierda = true;
         }
         // Flecha derecha
         if (keyCode == 39) {
-            instancia.teclaDerecha = false;
+            instancia.teclaDerecha = true;
         }
         // Flecha arriba
         if (keyCode == 38) {

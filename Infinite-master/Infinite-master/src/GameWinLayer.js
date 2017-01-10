@@ -1,5 +1,7 @@
 
+
 var GameWinLayer = cc.LayerColor.extend({
+    nivelMaximo: 2,
     nivelActual:null,
     ctor:function (nivel) {
         this._super();
@@ -24,6 +26,9 @@ var GameWinLayer = cc.LayerColor.extend({
     },
     pulsarReiniciar:function (sender) {
         // Volver a ejecutar la escena Prinicpal
+        this.nivelActual++;
+        if (this.nivelMaximo < this.nivelActual)
+            this.nivelActual = 1;
         cc.audioEngine.stopMusic();
         cc.director.runScene(new GameScene(this.nivelActual));
     }
